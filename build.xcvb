@@ -1,0 +1,5 @@
+#+xcvb
+(module
+ (:fullname "fare-mop"
+  :depends-on ("package" "utilities")
+  :supersedes-asdf ("fare-mop")))
