@@ -46,7 +46,7 @@ or implicitly by just inheritting from SIMPLE-PRINT-OBJECT-MIXIN.
 If SLOTS is T (the default), print all slots as per CLOSER-MOP:COMPUTE-SLOTS.
 If SLOTS is a list of slot designators, print them.
 Slots are printed as a p-list as per FARE-MOP:COLLECT-SLOTS."
-  (with-output-stream (stream)
+  (with-output (stream)
     (print-unreadable-object (object stream :type t :identity identity)
       (write (collect-slots object :slots slots) :stream stream))))
 
