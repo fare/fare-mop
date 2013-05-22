@@ -7,7 +7,8 @@ It notably contains a method SIMPLE-PRINT-OBJECT, and
 a mixin SIMPLE-PRINT-OBJECT-MIXIN that allow you to trivially define
 PRINT-OBJECT methods that print the interesting slots in your objects,
 which is great for REPL interaction and debugging."
-  :depends-on (:fare-utils #-asdf3 :asdf-driver :closer-mop)
+  :depends-on ((:version :fare-utils "1.0.0") #-asdf3 :asdf-driver :closer-mop)
+  :version "1.0.0"
   :components
   ((:file "package")
    (:file "utilities" :depends-on ("package"))))
